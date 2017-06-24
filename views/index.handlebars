@@ -1,0 +1,17 @@
+{{# each products}}
+	<div class="item">
+		<ul class="thumbnails">
+			{{# each this}}
+				<li class="span3">
+				  <div class="thumbnail">
+					<a href="/""><img src="{{ this.img1 }}" alt=""></a>
+					<div class="caption">
+					  <h5>{{ this.titel }}</h5>
+					  <h4><a class="btn" href="/show_product/{{this.auctionId}}">VIEW</a> <span class="pull-right">${{this.bestBid}}</span></h4>
+					</div>
+				  </div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+{{/each}}

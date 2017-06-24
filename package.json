@@ -1,0 +1,28 @@
+{
+  "name": "auctions-shop",
+  "version": "1.0.0",
+  "description": "AuctionShop",
+  "main": "app.js",
+  "scripts": {
+	"start": "node app.js"
+  },
+  "author": "David Riederich",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "nodemailer": "4.0.1"
+  }
+}

@@ -1,0 +1,61 @@
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+
+	<div class="span9">
+    <ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="/">Products</a> <span class="divider">/</span></li>
+    <li class="active">Product Details</li>
+    </ul>
+	<div class="row">
+			<div id="gallery" class="span3">
+            <a href="{{product.img1}}" title="{{product.titel}}">
+				<img src="{{product.img1}}" style="width:100%" alt="{{product.titel}}"/>
+            </a>
+			<div id="differentview" class="moreOptopm carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                   <a href="{{product.img1}}"> <img style="width:29%" src="{{product.img1}}" alt=""/></a>
+                   <a href="{{product.img2}}"> <img style="width:29%" src="{{product.img2}}" alt=""/></a>
+                   <a href="{{product.img3}}"> <img style="width:29%" src="{{product.img3}}" alt=""/></a>
+                  </div>
+                  <div class="item">
+                   <a href="{{product.img3}}"> <img style="width:29%" src="{{product.img3}}" alt=""/></a>
+                   <a href="{{product.img1}}"> <img style="width:29%" src="{{product.img1}}" alt=""/></a>
+                   <a href="{{product.img2}}"> <img style="width:29%" src="{{product.img2}}" alt=""/></a>
+                  </div>
+                </div>
+              <!--
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+			  -->
+              </div>
+
+
+			</div>
+			<div class="span6">
+				<h3>{{product.titel}}</h3>
+
+
+				<p>{{ product.description }}</p>
+				<label class="control-label"><span>${{product.bestBid}}</span></label>
+				</br></br>
+				<p>Auction started on 
+					{{product.time}}
+				</p>
+				<p>Offer will be available for {{product.auctionTime}} days</p>
+
+	
+			</div>
+	</div>
+	<hr class="soft"/>
+				<form class="form-horizontal qtyFrm" method="post" action="/bid/{{product.auctionId}}">
+				  <div class="control-group">
+					  <input style="float: left;" type="text" class="form-control" name="bid" placeholder="Your bid">
+					  <button style="float: left; margin-left: 1cm" type="submit" class="btn btn-large btn-primary pull-right"> Bid <i class=" icon-shopping-cart"></i></button>
+				  </div>
+				</form>
+</div>
+</div> </div>
+</div>

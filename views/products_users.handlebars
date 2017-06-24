@@ -1,0 +1,59 @@
+{{# each offered}}
+	<h3> Offered Products</h3>
+	<div class="item">
+		<ul class="thumbnails">
+			{{# each this}}
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="{{ this.img1 }}" alt=""></a>
+					<div class="caption">
+					  <h5>{{ this.titel }}</h5>
+					  <a>{{ this.description}}</a>
+					  <h4><a>$</a><span>{{this.bestBid}}</span></h4>
+					</div>
+				  </div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+{{/each}}
+
+{{# each purchased}}
+	<h3> Purchased Products</h3>
+	<div class="item">
+		<ul class="thumbnails">
+			{{# each this}}
+				<li class="span3">
+				  <div class="thumbnail">
+					<a><img src="{{ this.img1 }}" alt=""></a>
+					<div class="caption">
+					  <h5>{{ this.titel }}</h5>
+					  <a>{{ this.description}}</a>
+					  <h4><a>$</a><span>{{this.bestBid}}</span></h4>
+					</div>
+				  </div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+{{/each}}
+
+{{# each bestOffer}}
+	<h3> Bestbidder in ongoing auction</h3>
+	<div class="item">
+		<ul class="thumbnails">
+			{{# each this}}
+				<li class="span3">
+				  <div class="thumbnail">
+					<a href="/""><img src="{{ this.img1 }}" alt=""></a>
+					<div class="caption">
+					  <h5>{{ this.titel }}</h5>
+					  <a>{{ this.description}}</a>
+					  <h4><a class="btn" href="/show_product/{{this.auctionId}}">VIEW</a> <span class="pull-right">${{this.bestBid}}</span></h4>
+					</div>
+				  </div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+{{/each}}

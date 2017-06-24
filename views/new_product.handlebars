@@ -1,0 +1,132 @@
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+
+	<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="/">Home</a> <span class="divider">/</span></li>
+		<li class="active">product Registration</li>
+    </ul>
+	<h3>  Product Registration</h3>
+	<div class="well">
+	<!--
+	<div class="alert alert-info fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+	 </div>
+	<div class="alert fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+	 </div>
+	 <div class="alert alert-block alert-error fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>Lorem Ipsum is simply</strong> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+	 </div> -->
+	 {{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+	{{/if}}
+	<form class="form-horizontal" method="post" action="/auctions/new_product">
+		<h4>Your product information</h4>
+
+		<div class="control-group">
+			<label class="control-label" for="inputName">Product name <sup>*</sup></label>
+			<div class="controls">
+			  <input type="text" id="inputName" name="titel" placeholder="Product Name">
+			</div>
+		 </div>
+
+     <div class="control-group">
+ 			<label class="control-label" for="aditionalInfo">Additional information<sup>*</sup></label>
+ 			<div class="controls">
+ 			  <textarea id="aditionalInfo" name="description" cols="100" rows="10" placeholder="Additional information"></textarea>
+ 			</div>
+ 		</div>
+
+    <div class="control-group">
+			<label class="control-label" for="inputCategory">Category<sup>*</sup></label>
+			<div class="controls">
+			<select id="inputCategory" name="category" >
+				<option value="1">LP</option>
+        		<option value="2">CD</option>
+        		<option value="3">Tape</option>
+			</select>
+			</div>
+		</div>
+
+		<div class="control-group">
+		<label class="control-label" for="inputMinimum_set">Minimum set <sup>*</sup></label>
+		<div class="controls">
+		  <input type="text" id="inputMinimum_set" name="lowestBid" placeholder="Minimum set">
+		</div>
+	  </div>
+
+      <div class="control-group">
+    		<label class="control-label" for="inputDuration">Duration <sup>*</sup></label>
+    		<div class="controls">
+    		  <input type="text" id="inputDuration" name="auctionTime" placeholder="Days">
+    		</div>
+    	  </div>
+
+    	  <div class="control-group">
+    		<label class="control-label" for="image1">Image 1 <sup>*</sup></label>
+    		<div class="controls">
+    		  <input type="text" id="image1" name="img1" placeholder="Img url">
+    		</div>
+    	  </div>
+    	  <div class="control-group">
+    		<label class="control-label" for="image1">Image 2 <sup>*</sup></label>
+    		<div class="controls">
+    		  <input type="text" id="image2" name="img2" placeholder="Img url">
+    		</div>
+    	  </div>
+    	  <div class="control-group">
+    		<label class="control-label" for="image1">Image 3 <sup>*</sup></label>
+    		<div class="controls">
+    		  <input type="text" id="image3" name="img3" placeholder="Img url">
+    		</div>
+    	  </div>
+
+      <!--<div class="control-group">
+      	<label class="control-label" for="inputImage1">Image 1 </label>
+      	<div class="controls">
+          <input name="inputImage1" type="file" size="50" accept="image/*">
+      	</div>
+      </div>
+
+       <div class="control-group">
+      	<label class="control-label" for="inputImage2">Image 2 </label>
+      	<div class="controls">
+          <input name="inputImage2" type="file" size="50" accept="image/*">
+      	</div>
+      </div>
+
+      <div class="control-group">
+      	<label class="control-label" for="inputImage3">Image 3 </label>
+      	<div class="controls">
+          <input name="inputImage3" type="file" size="50" accept="image/*">
+      	</div>
+      </div>-->
+
+    <div class="alert alert-block alert-error fade in">
+  		<button type="button" class="close" data-dismiss="alert">×</button>
+  		<strong>Bitte geben Sie die fehlenden Informationen ein.</strong>
+  	 </div>
+
+	<p><sup>*</sup>Required field	</p>
+
+	<div class="control-group">
+			<div class="controls">
+				<input type="hidden" name="email_create" value="1">
+				<input type="hidden" name="is_new_product" value="1">
+				<input class="btn btn-large btn-success" type="submit" value="Put up for Sale" />
+			</div>
+		</div>
+	</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
