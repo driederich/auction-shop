@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "AuctionShop",
   "main": "app.js",
-  "scripts": {
-	"start": "node app.js"
+  "engines": {
+        "node": ">=6.9.1"
   },
+  "scripts": {
+    "start": "node app.js"
+  }
   "author": "David Riederich",
   "license": "ISC",
   "dependencies": {
