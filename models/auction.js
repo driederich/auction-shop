@@ -20,8 +20,6 @@ var AuctionSchema = mongoose.Schema({
     bestBid: Number
 });
 
-AuctionSchema.plugin(autoIncrement.plugin, {model: 'Auction', field: 'auctionId'});
-
 var Auction = module.exports = mongoose.model('Auction', AuctionSchema);
 
 module.exports.createAuction = function (newAuction, callback) {
