@@ -4,7 +4,7 @@
   "description": "AuctionShop",
   "main": "app.js",
   "scripts": {
-	"start": "npm start"
+	"start": "node app.js"
   },
   "author": "David Riederich",
   "license": "ISC",
