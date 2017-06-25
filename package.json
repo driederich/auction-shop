@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js"
-  }
+  },
   "author": "David Riederich",
   "license": "ISC",
   "dependencies": {
