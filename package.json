@@ -2,12 +2,12 @@
   "name": "auctions-shop",
   "version": "1.0.0",
   "description": "AuctionShop",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
         "node": ">=6.9.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": "David Riederich",
   "license": "ISC",
